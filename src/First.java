@@ -84,7 +84,7 @@ public class First {
 
 
     public static void main(String[] a){
-        int arr[] = {1,2,3,4,5};
+         int arr[] = {1,2,3,4,5};
         //First.rightShiftByK(arr, 1000001);
         //First.findUnique(new int[]{1,3,2,1,2});
         First.findLargestBinaryGap(5139);
