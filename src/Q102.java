@@ -26,6 +26,79 @@ public class Q102 {
         return s;
     }
 
+    /*Pythagorean Triplet in an array
+    Given an array of integers, write a function that returns true if there is a triplet (a, b, c) that satisfies a2 + b2 = c2.*/
+    boolean findPythagoreanTriplet(int[] a){
+        for (int i=0;i<a.length-1;i++){
+            for (int j=0;j<a.length-i-1;j++){
+                if (a[j]>a[j+1]){
+                    int temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1]=temp;
+                }
+            }
+        }
+
+        for (int i=0;i<a.length;i++){
+            a[i] = a[i]*a[i];
+        }
+        for (int k=a.length-1;k>1;k--){
+            int i=0,j=a.length-2;
+            while (i<a.length-2 && j>0){
+                int sum = a[i]+a[j];
+                if (sum==a[k]) return true;
+                else if (sum<a[k]) i++;
+                else j--;
+            }
+        }
+
+
+        return false;
+    }
+
+    /*convert BT into DLL*/
+    /*
+    Node convert(TreeNode root){
+        if(root==null) return null;
+        Node q = new Node(root.data);
+        Node p = convert(root.left);
+
+        if(p!= null){
+            p.next = q;
+            q.prev = p;
+
+        }
+        Node r = convert(root.right);
+        if(r!= null){
+            q.next = r;
+            r.prev = q;
+        }
+
+        return (p != null) ? p : q;
+
+    }
+
+     */
+
+    /*Given a binary tree (not a binary search tree) and two values say n1 and n2, write a program to find the least common ancestor.*/
+    /*
+    Node findLCA(Node root, int n1, int n2){
+        if(root==null) return null;
+          Node t = root;
+          int a1[] = new int[100];
+          int a2[] = new int[100];
+          while(t !=null || )
+
+
+
+
+    }
+
+
+      */
+
+
+
     void display(List<Stack<Integer>> results) {
         for (int i=0;i<results.size();i++){
             Stack<Integer> s = results.get(i);
@@ -38,7 +111,7 @@ public class Q102 {
 
     public static void main(String[] a){
         Q102 obj = new Q102();
-        Scanner s = new Scanner(System.in);
+        /*Scanner s = new Scanner(System.in);
         int T = s.nextInt();
         List<Stack<Integer>> results = new ArrayList<>(T);
         for (int i=0;i<T;i++){
@@ -50,7 +123,9 @@ public class Q102 {
             }
             results.add(obj.kLargestElements(input, k));
         }
-        obj.display(results);
+        obj.display(results);*/
+        int ar[] = {3,1,4,6,50};
+        System.out.println("pythagorean triplet="+obj.findPythagoreanTriplet(ar));
 
     }
 }
