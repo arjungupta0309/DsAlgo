@@ -46,6 +46,7 @@ public class Graph {
 
         return true;
     }
+    //time complexity: O(V+E)
 
     boolean isCyclic(int v, int parent, boolean[] visited){
         visited[v] = true;
@@ -84,6 +85,7 @@ public class Graph {
             }
         }
     }
+    //time complexity: O(V+E)
 
     //DFS
     void DFS(int src){
@@ -102,6 +104,7 @@ public class Graph {
             }
         }
     }
+    //time complexity: O(V+E)
 
     public static void main(String[] a){
         Graph graph1 = new Graph(5);
