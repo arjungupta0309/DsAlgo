@@ -255,7 +255,7 @@ order after that 
 
     /*
     maximum summation of i*arr[i] for an array over every rotation of the array by 1 element
-    e.g. {1,20,2,18}
+    e.g. {1,20,2,18}   2,0,3,1      0*2+1*0+2*3+3*1=9     1203   0*1+1*2+2*0+3*3=11
     it can be found by observing the following
     R0 = 0*a[0] + 1*a[1[ + 2* a[2] + 3*a[3]
     R1 = 0*a[3] + 1*a[0] + 2* a[1] + 3*a[2]

@@ -6,6 +6,9 @@ import java.util.List;
  */
 public class Tree {
 
+    int[] inorder = new int[100];
+    int[] preorder = new int[100];
+
     static class Node{
         int data;
         Node left;
@@ -44,7 +47,8 @@ public class Tree {
         }
     }
 
-    
+    /* serialize and de-serialize a binary tree */
+
 
     Node findNode(Node root, int data){
         if (root==null) return null;

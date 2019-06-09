@@ -26,7 +26,7 @@ public class PairCheck {
     }
 
     /* Q2. given a string of braces { and }, you need to remove minimum number of parenthesis from the string such that it contains balanced
-    parenthesis. E,g, {}{}{}}}. in this we can remove the last 2 to make it balanced parenthesis.
+    parenthesis. E,g, {{{}{}{}}}. in this we can remove the last 2 to make it balanced parenthesis.
    * */
     void balancedParenthesis(String input){
         Stack<Character> stack = new Stack<>();
